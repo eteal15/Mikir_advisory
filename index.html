@@ -1441,42 +1441,67 @@ function proceedFriendApply() {
   document.getElementById('f-plan').value = planVal;
 }
 
+// ─── CONFIG ───────────────────────────────────────────────────────────────────
+const BOT_TOKEN = '8691918765:AAEna7EZMPC_PeGPIOCf0XUm0LREJuas11I';
+const OWNER_CHAT_ID = '8133078538';
+
 // ─── SUBMIT ───────────────────────────────────────────────────────────────────
-function submitApplication() {
+async function submitApplication() {
   const name = document.getElementById('f-name').value.trim();
   const telegram = document.getElementById('f-telegram').value.trim();
   const service = document.getElementById('f-service').value;
   const situation = document.getElementById('f-situation').value.trim();
   const hasAudio = document.getElementById('f-audio').files.length > 0;
-const audioName = hasAudio ? document.getElementById('f-audio').files[0].name : null;
+  const audioName = hasAudio ? document.getElementById('f-audio').files[0].name : null;
+
   if (!name) { alert('Please enter your full name.\nሙሉ ስምዎን ያስገቡ።'); return; }
   if (!telegram) { alert('Please enter your Telegram username.\nቴሌግራም @username ያስገቡ።'); return; }
   if (!service) { alert('Please select a service type.\nአገልግሎት ዓይነት ይምረጡ።'); return; }
-  if (situation.length < 20) { alert('Please describe your situation in more detail.\nሁኔταዎን በዝርዝር ይግለፁ።'); return; }
+  if (situation.length < 20) { alert('Please describe your situation in more detail.\nሁኔታዎን በዝርዝር ይግለፁ።'); return; }
 
-  // Build message for Telegram
+  // Build message
   const chips = document.querySelectorAll('.option-chip.selected');
   const tried = Array.from(chips).filter(c=>c.closest('#screen-apply')).map(c=>c.dataset.val).join(', ');
 
-  const msg = `🌟 NEW APPLICATION — Mikir Advisory\n\n`
-    + `👤 Name: ${name}\n`
-    + `📱 Telegram: ${telegram}\n`
-    + `📞 Phone: ${document.getElementById('f-phone').value||'—'}\n`
-    + `📅 Age Range: ${selectedAge||'—'}\n`
-    + `📂 Service: ${service}\n`
-    + `💰 Plan: ${document.getElementById('f-plan').value||'—'}\n`
-    + (service==='D'?`👥 Friend Type: ${selectedGender||'—'}\n`:'')+
-    + `💳 Payment Pref: ${selectedPayment||'—'}\n\n`
-    +`📝 SITUATION:\n${situation}\n\n` +(hasAudio ? `🎙️ AUDIO FILE ATTACHED: ${audioName}\n\n` : '')
-    + `🎯 DESIRED OUTCOME:\n${document.getElementById('f-outcome').value||'—'}\n\n`
-    + `✅ TRIED BEFORE: ${tried||'nothing'}\n`;
+  const msg = '🌟 አዲስ ማመልከቻ — ምክር አድቫይዘሪ\n\n'
+    + '👤 ስም: ' + name + '\n'
+    + '📱 ቴሌግራም: ' + telegram + '\n'
+    + '📞 ስልክ: ' + (document.getElementById('f-phone').value || '—') + '\n'
+    + '📅 እድሜ: ' + (selectedAge || '—') + '\n'
+    + '📂 አገልግሎት: ' + service + '\n'
+    + '💰 ዕቅድ: ' + (document.getElementById('f-plan').value || '—') + '\n'
+    + (service === 'D' ? '👥 የጓደኛ ዓይነት: ' + (selectedGender || '—') + '\n' : '')
+    + '💳 የክፍያ ዘዴ: ' + (selectedPayment || '—') + '\n\n'
+    + '📝 ሁኔታ:\n' + situation + '\n\n'
+    + (hasAudio ? '🎙️ የድምፅ ፋይል: ' + audioName + '\n\n' : '')
+    + '🎯 የሚፈለግ ውጤት:\n' + (document.getElementById('f-outcome').value || '—') + '\n\n'
+    + '✅ ከዚህ በፊት የሞከሩት: ' + (tried || 'ምንም');
 
-  // Send via Telegram WebApp if available
-  if (window.Telegram && Telegram.WebApp && Telegram.WebApp.sendData) {
-    try { Telegram.WebApp.sendData(msg); } catch(e) {}
+  // Show loading
+  const btn = document.querySelector('#screen-apply .submit-btn');
+  const originalText = btn.textContent;
+  btn.textContent = '⏳ እየተላከ ነው...';
+  btn.disabled = true;
+
+  try {
+    const res = await fetch('https://api.telegram.org/bot' + BOT_TOKEN + '/sendMessage', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ chat_id: OWNER_CHAT_ID, text: msg })
+    });
+    const data = await res.json();
+    if (data.ok) {
+      navTo('success');
+    } else {
+      throw new Error(data.description || 'Failed');
+    }
+  } catch (err) {
+    alert('❌ መላክ አልተቻለም። ኢንተርኔት ያረጋግጡ እና እንደገና ይሞክሩ።');
+    console.error(err);
+  } finally {
+    btn.textContent = originalText;
+    btn.disabled = false;
   }
-
-  navTo('success');
 }
 </script>
 </body>
