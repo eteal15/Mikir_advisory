@@ -576,7 +576,79 @@
   <div class="page-content scroll-area" style="flex:1">
     <!-- Hero -->
     <div class="hero">
-      <div class="hero-logo">🧭</div>
+   <div class="hero-logo" style="background:none;box-shadow:none;width:auto;height:auto;border-radius:0;padding:0">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 120" width="220" height="83">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FDD878"/>
+      <stop offset="100%" style="stop-color:#C8952A"/>
+    </linearGradient>
+    <linearGradient id="goldGrad2" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#C8952A"/>
+      <stop offset="100%" style="stop-color:#F5D06A"/>
+    </linearGradient>
+    <linearGradient id="goldStroke" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E8B84B"/>
+      <stop offset="100%" style="stop-color:#A0720E"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="textGlow" x="-10%" y="-30%" width="120%" height="160%">
+      <feGaussianBlur stdDeviation="1.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <g transform="translate(10, 10)">
+    <path d="M0 8 Q0 0 8 0 L72 0 Q80 0 80 8 L80 56 Q80 64 72 64 L36 64 L22 82 L22 64 L8 64 Q0 64 0 56 Z"
+          fill="#C8952A" fill-opacity="0.07"/>
+    <path d="M0 8 Q0 0 8 0 L72 0 Q80 0 80 8 L80 56 Q80 64 72 64 L36 64 L22 82 L22 64 L8 64 Q0 64 0 56 Z"
+          fill="none" stroke="url(#goldStroke)" stroke-width="2.5" stroke-linejoin="round"/>
+    <g transform="translate(40, 34)" filter="url(#glow)">
+      <circle cx="0" cy="-10" r="13" fill="none" stroke="url(#goldGrad)" stroke-width="2.2"/>
+      <circle cx="0" cy="-10" r="9" fill="#E8B84B" fill-opacity="0.12"/>
+      <path d="M-4 4 Q-4 8 0 8 Q4 8 4 4" fill="none" stroke="url(#goldGrad)" stroke-width="2" stroke-linecap="round"/>
+      <line x1="-6" y1="4" x2="6" y2="4" stroke="url(#goldGrad2)" stroke-width="2.2" stroke-linecap="round"/>
+      <line x1="-5" y1="9" x2="5" y2="9" stroke="url(#goldGrad2)" stroke-width="2" stroke-linecap="round"/>
+      <line x1="-3" y1="14" x2="3" y2="14" stroke="#C8952A" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="0" y1="-26" x2="0" y2="-30" stroke="#FDD878" stroke-width="2" stroke-linecap="round"/>
+      <line x1="14" y1="-20" x2="17" y2="-23" stroke="#FDD878" stroke-width="2" stroke-linecap="round"/>
+      <line x1="-14" y1="-20" x2="-17" y2="-23" stroke="#FDD878" stroke-width="2" stroke-linecap="round"/>
+      <line x1="17" y1="-10" x2="21" y2="-10" stroke="#E8B84B" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="-17" y1="-10" x2="-21" y2="-10" stroke="#E8B84B" stroke-width="1.8" stroke-linecap="round"/>
+      <line x1="13" y1="-1" x2="16" y2="2" stroke="#C8952A" stroke-width="1.5" stroke-linecap="round" stroke-opacity="0.8"/>
+      <line x1="-13" y1="-1" x2="-16" y2="2" stroke="#C8952A" stroke-width="1.5" stroke-linecap="round" stroke-opacity="0.8"/>
+    </g>
+    <circle cx="14" cy="52" r="2.5" fill="#C8952A" fill-opacity="0.5"/>
+    <circle cx="22" cy="52" r="1.8" fill="#C8952A" fill-opacity="0.35"/>
+    <circle cx="29" cy="52" r="1.2" fill="#C8952A" fill-opacity="0.2"/>
+  </g>
+  <g transform="translate(106, 8)">
+    <text x="0" y="56"
+          font-family="Georgia, 'Times New Roman', serif"
+          font-size="42" font-weight="700" letter-spacing="5"
+          fill="url(#goldGrad2)" filter="url(#textGlow)">MIKIR</text>
+    <line x1="1" y1="63" x2="196" y2="63"
+          stroke="url(#goldGrad)" stroke-width="1.2" stroke-opacity="0.8"/>
+    <polygon points="98,59 102,63 98,67 94,63" fill="#C8952A" fill-opacity="0.7"/>
+    <text x="1" y="80"
+          font-family="Georgia, 'Times New Roman', serif"
+          font-size="12.5" font-weight="400" letter-spacing="9"
+          fill="#C8952A" fill-opacity="0.95">ADVISORY</text>
+    <text x="1" y="100"
+          font-family="'Noto Serif Ethiopic', serif"
+          font-size="12" font-weight="300" letter-spacing="1.5"
+          fill="#E8B84B" fill-opacity="0.7">ምክር አድቫይዘሪ</text>
+  </g>
+</svg>
+</div>
       <h1>Mikir Advisory</h1>
       <div class="hero-sub">ምክር አድቫይዘሪ — የሚስጥር ምክር ለኢትዮጵያውያን</div>
       <p class="hero-desc" id="hero-desc">Private, honest, affordable advice in Amharic. Life decisions, relationships, business problems — we're here for you.</p>
@@ -1457,7 +1529,7 @@ async function submitApplication() {
   if (!name) { alert('Please enter your full name.\nሙሉ ስምዎን ያስገቡ።'); return; }
   if (!telegram) { alert('Please enter your Telegram username.\nቴሌግራም @username ያስገቡ።'); return; }
   if (!service) { alert('Please select a service type.\nአገልግሎት ዓይነት ይምረጡ።'); return; }
-  if (situation.length < 20) { alert('Please describe your situation in more detail.\nሁኔታዎን በዝርዝር ይግለፁ።'); return; }
+  if (situation.length < 20 && !hasAudio) { alert('Please describe your situation or attach a voice recording.\nሁኔታዎን ይግለፁ ወይም የድምፅ መልእክት ያያይዙ።'); return; }
 
   // Build message
   const chips = document.querySelectorAll('.option-chip.selected');
@@ -1484,24 +1556,36 @@ async function submitApplication() {
   btn.disabled = true;
 
   try {
-    const res = await fetch('https://api.telegram.org/bot' + BOT_TOKEN + '/sendMessage', {
+  // Step 1 — always send the text message first
+  const res = await fetch('https://api.telegram.org/bot' + BOT_TOKEN + '/sendMessage', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ chat_id: OWNER_CHAT_ID, text: msg })
+  });
+  const data = await res.json();
+  if (!data.ok) throw new Error(data.description || 'Failed');
+  
+  // Step 2 — if audio attached, send the actual audio file
+  if (hasAudio) {
+    const audioFile = document.getElementById('f-audio').files[0];
+    const formData = new FormData();
+    formData.append('chat_id', OWNER_CHAT_ID);
+    formData.append('audio', audioFile);
+    formData.append('caption', '🎙️ የድምፅ ፋይል — ' + name + ' (' + telegram + ')');
+    await fetch('https://api.telegram.org/bot' + BOT_TOKEN + '/sendAudio', {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ chat_id: OWNER_CHAT_ID, text: msg })
+      body: formData
     });
-    const data = await res.json();
-    if (data.ok) {
-      navTo('success');
-    } else {
-      throw new Error(data.description || 'Failed');
-    }
-  } catch (err) {
-    alert('❌ መላክ አልተቻለም። ኢንተርኔት ያረጋግጡ እና እንደገና ይሞክሩ።');
-    console.error(err);
-  } finally {
-    btn.textContent = originalText;
-    btn.disabled = false;
   }
+  
+  navTo('success');
+} catch (err) {
+  alert('❌ መላክ አልተቻለም። ኢንተርኔት ያረጋግጡ እና እንደገና ይሞክሩ።');
+  console.error(err);
+} finally {
+  btn.textContent = originalText;
+  btn.disabled = false;
+}
 }
 </script>
 </body>
