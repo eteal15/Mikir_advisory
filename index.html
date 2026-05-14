@@ -22,7 +22,6 @@
     --border: #E8D5B0;
     --shadow: 0 4px 24px rgba(26,15,0,0.10);
   }
-
   * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
   html { font-size: 16px; }
 
@@ -216,6 +215,20 @@
     display: flex; align-items: center; justify-content: space-between;
     padding-top: 10px; border-top: 1px solid var(--border);
   }
+  /* Add this to your CSS */
+.card-name, .card-name-am, .top-bar-title, .hero h1, .hero-sub {
+  white-space: nowrap; /* Prevents text from wrapping to the next line */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Adds ... if the text is too long */
+}
+
+/* Specifically for Amharic and long descriptions */
+.card-desc, .card-desc-am, .step-desc, .review-text-am {
+  word-break: keep-all; /* Prevents breaking individual characters */
+  overflow-wrap: break-word;
+  min-width: 0; /* Important for flex child containers */
+}
+
   .price-from { font-size: 11px; color: var(--muted); }
   .price-val { font-size: 18px; font-weight: 700; color: var(--gold); }
   .price-val span { font-size: 12px; font-weight: 400; color: var(--muted); }
