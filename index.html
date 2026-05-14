@@ -280,7 +280,7 @@
     font-size: 13px; color: var(--text);
     display: flex; align-items: center; gap: 8px;
   }
-  .features-list li::before { content: '✓'; color: #2E7D52; font-weight: 700; display: inline-block; }
+  .features-list li::before { content: '✓'; color: var(--green); font-weight: 700; }
   .select-plan-btn {
     width: 100%; padding: 12px;
     background: var(--deep); color: #fff; border: none;
@@ -663,7 +663,7 @@
     <div class="disclaimer">
       <div class="disclaimer-title">⚠️ Important Notice</div>
       <p id="disc-en">Mikir Advisory is a <strong>text-based personal advisory service</strong> — not a licensed medical, legal, or professional consultation. We offer thoughtful, culturally-aware guidance to help you think clearly and decide better. For medical or legal emergencies, please seek a qualified professional.</p>
-      <p id="disc-am" class="am">ምክር ኤድቫይዘሪ <strong>በጽሑፍ ላይ የተመሠረተ የግል የምክር አገልግሎት</strong> ሲሆን፤ ፈቃድ ያለው የሕክምና፣ የሕግ ወይም የሙያ ምክክር አይደለም። እኛ በግልጽ እንዲያስቡና የተሻለ ውሳኔ እንዲወስኑ ለመርዳት፣ ጥንቃቄ የተሞላበትና ባሕላዊ እሴቶችን ያገናዘበ መመሪያ እናቀርባለን። ለሕክምና ወይም ለሕግ አስቸኳይ ጉዳዮች፣ እባክዎን ብቃት ያለውን ባለሙያ ያማክሩ።</p>
+      <p id="disc-am" class="am"><strong>ምክር ኤድቫይዘሪ በጽሑፍ ላይ የተመሠረተ የግል የምክር አገልግሎት</strong> <b>ሲሆን፤ ፈቃድ ያለው የሕክምና፣ የሕግ ወይም የሙያ ምክክር አይደለም። እኛ በግልጽ እንዲያስቡና የተሻለ ውሳኔ እንዲወስኑ ለመርዳት፣ ጥንቃቄ የተሞላበትና ባሕላዊ እሴቶችን ያገናዘበ መመሪያ እናቀርባለን። ለሕክምና ወይም ለሕግ አስቸኳይ ጉዳዮች፣ እባክዎን ብቃት ያለውን ባለሙያ ያማክሩ።</b></p>
     </div>
         <!-- Services Section -->
     <div class="section-header">
@@ -711,6 +711,25 @@
           </div>
         </div>
       </div>
+      <!-- Service C -->
+      <div class="service-card" onclick="showService('business')">
+        <div class="card-accent green"></div>
+        <div class="card-body">
+          <div class="card-top">
+            <div class="card-icon green">📈</div>
+            <div class="card-info">
+              <div class="card-name" data-en="Business Problem Solving" data-am="የንግድ ችግር መፍትሄ">Small and online Business Problem Solving</div>
+              <div class="card-name-am">የትንንሽ እና የ ኦንላይን ቢዝነስ ችግር መፍትሄ</div>
+            </div>
+            <div class="card-badge" style="color:var(--green);border-color:#A8DFC4;background:var(--green-light)">C</div>
+          </div>
+  <div class="card-desc" data-en="Sales dropping? Not sure how to price your producs?where to promote and sale the product? how to manage social media ...We research global solutions for your business , filter for Ethiopian context, and deliver you a written action plan." data-am="ሽያጭ እየቀነሰ ከተቸገሩ፣ ዋጋ ማውጣት ከከ በዶት፣ የት መሸጥ እንዳለብዎ ግራ ከገባዎት እንዲሁም ሶሻል ሚዲያዎትኝ እንዴት እንደሚቆጣጠሩ አለምዓቀፍ ምርምር አድርገን ለእርሶ ቢዝነስ የሚሆ ተስማሚ መፍትሄ እናቀርባለን።">Sales dropping? Not sure how to price your producs?where to promote and sale the product? how to manage social media ...We research global solutions for your business , filter for Ethiopian context, and deliver you a written action plan..</div>
+          <div class="card-footer">
+            <div><div class="price-from" data-en="Starting from" data-am="ከ">Starting from</div><div class="price-val">200 <span>ETB</span></div></div>
+            <button class="cta-btn" data-en="Apply Now" data-am="አሁን ያመልክቱ">Apply Now →</button>
+          </div>
+        </div>
+      </div>
 
       <!-- Service D -->
       <div class="service-card" onclick="showService('friend')">
@@ -722,7 +741,7 @@
               <div class="card-name" data-en="Online Friend Support" data-am="የኦንላይን ጓደኛ ድጋፍ">Online Friend Support</div>
               <div class="card-name-am">የኦንላይን ጓደኛ ድጋፍ</div>
             </div>
-            <div class="card-badge" style="color:#6B3FA0;border-color:#D4B8EE;background:#F3EBF9">C</div>
+            <div class="card-badge" style="color:#6B3FA0;border-color:#D4B8EE;background:#F3EBF9">D</div>
           </div>
           <div class="card-desc" data-en="Need someone to talk to — not a therapist, just a warm, consistent, non-judgmental text presence? Subscribe to a friend who listens, checks in, and supports you privately." data-am="የሚያዋሩት ሰው ይፈልጋሉ? የሥነ-አእምሮ ባለሙያ ሳይሆን፣ በጽሑፍ ብቻ የሚያወራህ/ሽ፣ የማይለዋወጥ እና ያለ ምንም ትችት የሚደግፍዎት የልብ ሰው? ሁሌም የሚያዳምጥዎትን፣ ሁኔታዎን የሚከታተልና በምስጢር የሚደግፍዎትን 'ጓደኛ' ለማግኘት ይመዝገቡ።">Need someone to talk to? Not a therapist — a warm, private, non-judgmental text friend who listens and checks in on you. Monthly subscription.</div>
           <div class="card-footer">
@@ -854,7 +873,7 @@
           <li data-en="Direct, clear answer" data-am="ቀጥተኛ ምላሽ">Direct, clear answer</li>
           <li data-en="24-hour response" data-am="24 ሰዓት ምላሽ">24-hour response</li>
         </ul>
-        <button class="select-plan-btn" onclick="applyNow('Quick Advice — 100 ETB')">Apply for This →</button>
+        <button class="select-plan-btn" onclick="applyNow('Quick Advice — 200 ETB')">Apply for This →</button>
       </div>
       <div class="price-card featured">
         <div class="popular-tag">⭐ POPULAR</div>
@@ -864,12 +883,12 @@
         <div class="price-per">per session · within 24hrs</div>
         <ul class="features-list">
           <li data-en="Full situation analysis" data-am="ሙሉ የሁኔታ ትንተና
-          "></li>
-          <li data-en="Clear recommendation" data-am="ግልጽ ምክረ-ሀሳብ"></li>
-          <li data-en="Step-by-step action plan" data-am="ደረጃ በደረጃ የድርጊት መርሃ ግብር"></li>
-          <li data-en="Warning — risks to avoid" data-am="ማስጠንቀቂያ — ሊወገዱ የሚገቡ አደጋዎች"></li>
+          ">Full situation analysis</li>
+          <li data-en="Clear recommendation" data-am="ግልጽ ምክረ-ሀሳብ">Clear recommendation</li>
+          <li data-en="Step-by-step action plan" data-am="ደረጃ በደረጃ የድርጊት መርሃ ግብር">Step-by-step action plan</li>
+          <li data-en="Warning — risks to avoid" data-am="ማስጠንቀቂያ — ሊወገዱ የሚገቡ አደጋዎች">Warning — risks to avoid</li>
         </ul>
-        <button class="select-plan-btn" onclick="applyNow('Standard Session — 200 ETB')">Apply for This →</button>
+        <button class="select-plan-btn" onclick="applyNow('Standard Session — 400 ETB')">Apply for This →</button>
       </div>
       <div class="price-card">
         <div class="price-card-name">Deep Session</div>
@@ -877,26 +896,24 @@
         <div class="price-big">400 <span>ETB</span></div>
         <div class="price-per">per session · within 48hrs</div>
         <ul class="features-list">
-          <li data-en="Complex, multi-layered situation" data-am="ውስብስብ እና ዘርፈ-ብዙ ሁኔታዎች"></li>
-          <li data-en="Multiple scenarios analyzed"data-am="የተለያዩ አማራጭ ሁኔታዎች ትንተና"></li>
-          <li data-en="Full written plan" data-am="ሙሉ የጽሁፍ እቅድ"></li>
-          <li data-en="Includes one follow-up" data-am="አንድ የክትትል አገልግሎትን ያካትታል"></li>
+          <li data-en="Complex, multi-layered situation" data-am="ውስብስብ እና ዘርፈ-ብዙ ሁኔታዎች">Complex, multi-layered situation</li>
+          <li data-en="Multiple scenarios analyzed"data-am="የተለያዩ አማራጭ ሁኔታዎች ትንተና">Multiple scenarios analyzed</li>
+          <li data-en="Full written plan" data-am="ሙሉ የጽሁፍ እቅድ">Full written plan</li>
+          <li data-en="Includes one follow-up" data-am="አንድ የክትትል አገልግሎትን ያካትታል">Includes one follow-up</li>
         </ul>
         <button class="select-plan-btn" onclick="applyNow('Deep Session — 400 ETB')">Apply for This →</button>
       </div>
       <div class="price-card">
         <div class="price-card-name">Follow-Up</div>
         <div class="price-card-am am">ክትትል ምክር</div>
-        <div class="price-big">100<span>ETB</span></div>
+        <div class="price-big">100 <span>ETB</span></div>
         <div class="price-per">per session · within 24hrs</div>
-
-
         <ul class="features-list">
-          <li data-en="Update on same situati" data-am="ስለተመሳሳይ ሁኔታ ወቅታዊ መረጃ">on</li>
-          <li data-en="Adjusted advice" data-am="የተስተካከለ ምክር"></li>
-          <li data-en="For existing clients only" data-am="ለነባር ደንበኞች ብቻ የተወሰነ"></li>
+          <li data-en="Update on same situation" data-am="ስለተመሳሳይ ሁኔታ ወቅታዊ መረጃ">Update on same situation</li>
+          <li data-en="Adjusted advice" data-am="የተስተካከለ ምክር">Adjusted advice</li>
+          <li data-en="For existing clients only" data-am="ለነባር ደንበኞች ብቻ የተወሰነ">For existing clients only</li>
         </ul>
-        <button class="select-plan-btn" onclick="applyNow('Follow-Up Session — 100 ETB')">Apply for This →</button>
+        <button class="select-plan-btn" onclick="applyNow('Follow-Up Session — 75 ETB')">Apply for This →</button>
       </div>
     </div>
 
@@ -908,9 +925,9 @@
         <div class="price-big">300 <span>ETB</span></div>
         <div class="price-per">per month</div>
         <ul class="features-list">
-          <li>2 advisory sessions/month</li>
-          <li>24-hour response time</li>
-          <li>All 3 service types (A, B )</li>
+          <li data-en="2 advisory sessions/month" data-am="በወር 2 የምክር አገልግሎት">2 advisory sessions/month</li>
+          <li data-en="24-hour response time" data-am="በ24 ሰዓት ውስጥ ምላሽ ይሰጣል">24-hour response time</li>
+          <li data-en="All 2 service types (A, B)" data-am="ሁለቱንም አገልግሎቶች ያካታል(የህይወት ውሳኔ እና ግንኙነት ምክር)">All 2 service types (A,B)</li>
         </ul>
         <button class="select-plan-btn" onclick="applyNow('Basic Monthly Plan — 300 ETB/mo')">Subscribe →</button>
       </div>
@@ -921,10 +938,9 @@
         <div class="price-big">500 <span>ETB</span></div>
         <div class="price-per">per month</div>
         <ul class="features-list">
-          <li>4 advisory sessions/month</li>
-          <li>Priority 12-hour response</li>
-          <li>All service types</li>
-          <li>Monthly progress check-in</li>
+          <li data-en="4 advisory sessions/month" data-am="በወር አራት የምክር አገልግሎት ይሰጣል">4 advisory sessions/month</li>
+          <li data-en="Priority 12-hour response" data-am="12 ሰዓት ባልሞላ ጊዜ ውስጥ ምላሽ ይሰጣል">Priority 12-hour response</li>
+          <li data-en="All service type(A,B,C)" data-am="3ቱን አገልግሎቶች ያካታል (A,B,C)">Include 3 service types(A,B,C)</li>
         </ul>
         <button class="select-plan-btn" onclick="applyNow('Standard Monthly Plan — 500 ETB/mo')">Subscribe →</button>
       </div>
@@ -934,10 +950,10 @@
         <div class="price-big">900 <span>ETB</span></div>
         <div class="price-per">per month</div>
         <ul class="features-list">
-          <li>8 advisory sessions/month</li>
-          <li>Same-day response</li>
-          <li>Business monthly check-in</li>
-          <li>Priority queue — first served</li>
+          <li data-en="8 advisory sessions/month" data-am="በወር 8 የምክር አገልግሎት ይሰጣል">8 advisory sessions/month</li>
+          <li data-en="Same-day response" data-am="በዚያው ቀን በፍጥነት ምላሽ ይሰጣል">Same-day response</li>
+          <li data-en="All service include with fast answers(A,B,C,D)" data-am="ሁሉንም አገልግሎቶች በፍጥነት ያገኛሉ(A,B,C,D)">All service include with fast answers(A,B,C,D)</li>
+          <li data-en="Monthly progress check-in" data-am="በየወሩ ክትትል ይደረጋል">Monthly progress check-in</li>
         </ul>
         <button class="select-plan-btn" onclick="applyNow('Premium Monthly Plan — 900 ETB/mo')">Subscribe →</button>
       </div>
@@ -947,45 +963,45 @@
     <div id="tab-friend" class="pricing-grid" style="display:none">
       <div style="background:#F3EBF9;border-radius:16px;padding:16px 18px;margin-bottom:4px;border:1.5px solid #D4B8EE">
         <p style="font-size:13px;color:#6B3FA0;line-height:1.6"><strong>💜 What is Friend Support?</strong><br>Not therapy. Not advice. Just a warm, consistent text presence who listens, checks in daily, and supports you privately through hard times.</p>
-        <p style="font-size:12px;color:#8A5A90;margin-top:6px;font-family:'Noto Serif Ethiopic',serif">ሕክምና አይደለም። ዕለት ዕለት የሚጠይቀዎ፣ ሚስጥርዎን የሚጠብቅ ዲጂታል ጓደኛ።</p>
+        <p style="font-size:12px;color:#8A5A90;margin-top:6px;font-family:'Noto Serif Ethiopic',serif"><b>ሕክምና ያልሆነ ነገር ግን ዕለት ዕለት የሚያወራዎ፣ የሚጠይቀዎ፣ ሚስጥርዎን የሚጠብቅ፣ በከባድ ጊዜዎች ከጎኖት የሚሆን ዲጂታል ጓደኛ።</b></p>
       </div>
       <div class="price-card">
         <div class="price-card-name">Basic Support</div>
         <div class="price-card-am am">መሠረታዊ ድጋፍ</div>
-        <div class="price-big">400 <span>ETB</span></div>
+        <div class="price-big">350 <span>ETB</span></div>
         <div class="price-per">per month</div>
         <ul class="features-list">
-          <li>Daily check-in text</li>
-          <li>Replies within 4 hours</li>
-          <li>1 hour of chat per day</li>
-          <li>Choose friend type (M/F)</li>
+          <li data-en="Daily check-in text" data-am="በየቀኑ ደህንነቶን ቼክ የሚያደርግ መልእክት ይደርሶታል">Daily check-in text</li>
+          <li data-en="1 hour of chat per day" data-am="በቀን ለ አንድ ሰዓት ያህል ማውራት ይቻላል">1 hour of chat per day</li>
+          <li data-en="Choose friend type (M/F)" data-am="የሚያወራዎትን ጓደኛ ጾታ መምረጥ ይችላሉ">Choose friend type (M/F)</li>
         </ul>
-        <button class="select-plan-btn" onclick="showFriendDetail('Basic Support — 400 ETB/mo')">Choose Friend →</button>
+        <button class="select-plan-btn" onclick="showFriendDetail('Basic Support — 350 ETB/mo')">Choose Friend →</button>
       </div>
       <div class="price-card featured">
         <div class="popular-tag">RECOMMENDED</div>
         <div class="price-card-name">Standard Support</div>
         <div class="price-card-am am">መደበኛ ድጋፍ</div>
-        <div class="price-big">700 <span>ETB</span></div>
+        <div class="price-big">500 <span>ETB</span></div>
         <div class="price-per">per month</div>
         <ul class="features-list">
-          <li>Daily check-in + priority replies</li>
-          <li>2 hours of chat per day</li>
-          <li>Weekly emotional review</li>
-          <li>Choose friend type (M/F)</li>
+          <li data-en="Daily check-in + priority replies" data-am="በየቀኑ ደህንነቶን ይጠይቃል + ፈጣን ምላሽ ይሰጦታል">Daily check-in + priority replies</li>
+          <li data-en="2 hours of chat per day" data-am="በቀን ለ 2 ሰዓታት ማውራት ይቻላል">2 hours of chat per day</li>
+          <li data-am="Weekly emotional review" data-am="የሳምንቱ የስሜት ድጋፍ ይሰጣል">Weekly emotional review</li>
+          <li data-en="Choose friend type (M/F)" data-am="የጓደኞትን ጾታ መምረጥ ይቻላል(ሴ/ወ)">Choose friend type (M/F)</li>
         </ul>
-        <button class="select-plan-btn" onclick="showFriendDetail('Standard Support — 700 ETB/mo')">Choose Friend →</button>
+        <button class="select-plan-btn" onclick="showFriendDetail('Standard Support — 500 ETB/mo')">Choose Friend →</button>
       </div>
       <div class="price-card">
         <div class="price-card-name">Premium Support</div>
         <div class="price-card-am am">ፕሪሚየም ድጋፍ</div>
-        <div class="price-big">1,100 <span>ETB</span></div>
+        <div class="price-big">700 <span>ETB</span></div>
         <div class="price-per">per month</div>
         <ul class="features-list">
-          <li>Everything in Standard</li>
-          <li>2 advisory sessions included</li>
-          <li>Fastest response guaranteed</li>
-          <li>Choose friend type (M/F)</li>
+          <li data-en="Everything in Standard" data-am="ሁሉም መደበኛ ላይ ያሉ አገልግሎቶች ይካተታሉ">Everything in Standard</li>
+          <li data-en="Additional 2 hours chat" data-am="ተጨማሪ 2 ሰዓታት ማውራት ይቻላል">Additional 2 hours chat</li>
+          <li data-en="2 advisory sessions included" data-am="2 የምክር አገልግሎት ያጠቃልላል">2 advisory sessions included</li>
+          <li data-en="Fastest response guaranteed" data-am="ፈጣን ምላሻ ይሰጣል">Fastest response guaranteed</li>
+          <li data-en="Choose friend type (M/F)" data-am="የጓደኞትን ጸባይ እና የአነጋገር ስታይል ይመርጣሉ">You can choose your friend talking style</li>
         </ul>
         <button class="select-plan-btn" onclick="showFriendDetail('Premium Support — 1,100 ETB/mo')">Choose Friend →</button>
       </div>
@@ -1020,7 +1036,8 @@
         <div class="step-content">
           <div class="step-title">Choose Your Service</div>
           <div class="step-title-am am">አገልግሎትዎን ይምረጡ</div>
-          <div class="step-desc">Browse our 4 services (A, B, C, D) and select the plan that fits your situation and budget.</div>
+          <div class="step-desc">Browse our 4 services (A, B, C, D) and select the plan that fits your situation and budget. <br> ከ 4ቱ አገልግሎት ውስጥ  (A,B,C,D) የፈለጉትን፣ እንዲሁም በእርሱ ስር ያለውን አቅሞትን የሚመጥነውን እና ለችግሮት የሚስማማውን ዕቅድ ይምረጡ።
+          </div>
         </div>
       </div>
       <div class="step">
@@ -1031,7 +1048,7 @@
         <div class="step-content">
           <div class="step-title">Fill the Application Form</div>
           <div class="step-title-am am">ቅጹን ይሙሉ</div>
-          <div class="step-desc">Tell us your name, contact, situation type, and describe your problem in detail. The more you share, the better our advice.</div>
+          <div class="step-desc">Tell us your name, contact, situation type, and describe your problem in detail. The more you share, the better our advice.</div> <br> ቅጹ ላይ የተጠየቁትን መረጃዎች ይሙሉ ስም,ስልክ እንዲሁም በምን ጉዳይ እንደምናግዞ በደንብ አብራርተው ይጻፉ ወይም በድምጽ ይላኩ።
         </div>
       </div>
       <div class="step">
@@ -1041,8 +1058,8 @@
         </div>
         <div class="step-content">
           <div class="step-title">We Review Your Application</div>
-          <div class="step-title-am am">ማመልከቻዎን እናጠናል</div>
-          <div class="step-desc">Your application is sent securely to us. We'll review it and confirm the correct service tier within a few hours.</div>
+          <div class="step-title-am am">ማመልከቻዎን እናጠናለን</div>
+          <div class="step-desc">Your application is sent securely to us. We'll review it and confirm the correct service tier within a few hours.</div> <br> ቅጹ ሞልተው ከላኩ በኋላ የላኩትን ተመልክተን 30 ደቂቃ ውስጥ በስልኮ የማረጋገጫ መልእክት ይደርሶታል።
         </div>
       </div>
       <div class="step">
@@ -1053,7 +1070,7 @@
         <div class="step-content">
           <div class="step-title">Pay via Telebirr or CBE Birr</div>
           <div class="step-title-am am">ቴሌብር ወይም CBE ብር ይክፈሉ</div>
-          <div class="step-desc">We'll send you the payment details. Transfer via Telebirr or CBE Birr and send us the screenshot. <strong>Payment required before work starts.</strong></div>
+          <div class="step-desc">We'll send you the payment details. Transfer via Telebirr or CBE Birr and send us the screenshot. <strong>Payment required before work starts.</strong> <br> ማረጋገጫው ከደረሶት በኋላ በ ቴሌግራም በምንልክሎት የባንክ ወይም የቴሌብር ቁጥር ብር በማስገባት ስክሪንሹት ይልካሉ። <strong>ስራ ከመጀመሩ በፊት ክፍያ ግዴታ ነው</strong></div>
         </div>
       </div>
       <div class="step">
@@ -1064,7 +1081,7 @@
         <div class="step-content">
           <div class="step-title">Receive Your Advisory</div>
           <div class="step-title-am am">ምክርዎን ይቀበሉ</div>
-          <div class="step-desc">Your full written advisory is delivered via Telegram within 24 hours (or 48hrs for Deep Sessions). Private, clear, actionable.</div>
+          <div class="step-desc">Your full written advisory is delivered via Telegram within 24 hours (or 48hrs for Deep Sessions). Private, clear, actionable.<br> በመጨረሻም ለችግሮ መፍትሄ የሚሆን ጽሁፍ በ24 ሰዓት ውስጥ(48 ሰዓት እንደ ችግሩ) በቴሌግራም አካውን በቀጥታ ይላካል። </div>
         </div>
       </div>
       <div class="step">
@@ -1074,7 +1091,7 @@
         <div class="step-content">
           <div class="step-title">Optional: Subscribe for More</div>
           <div class="step-title-am am">ምርጫ፡ ወርሃዊ ምዝገባ</div>
-          <div class="step-desc">Loved the service? Subscribe to a monthly plan and always have an advisor available when life gets complicated.</div>
+          <div class="step-desc">Loved the service? Subscribe to a monthly plan and always have an advisor available when life gets complicated. <br>አግልግሎቱን ከወደዱት ወርሃዊ አገልግሎታችንን በመጠቀም ግራ በገባዎት ጊዜ የሚያግዞ መካሪ ያግኙ።</div>
         </div>
       </div>
     </div>
